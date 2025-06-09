@@ -1,0 +1,246 @@
+.cd-tabs {
+  margin-bottom: 0px;
+}
+
+.cd-tabs:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.cd-tabs:after {
+  /* subtle gradient layer on top right - to indicate it's possible to scroll */
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 60px;
+  width: 200px;
+  z-index: 1;
+  pointer-events: none;
+  background: linear-gradient(to left, white, rgba(255, 255, 255, 0));
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 0.3s 0s, visibility 0s 0s;
+}
+
+.no-cssgradients .cd-tabs::after {
+  display: none;
+}
+
+.cd-tabs.is-ended::after {
+  /* class added in jQuery - remove the gradient layer when it's no longer possible to scroll */
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s 0s, visibility 0s 0.3s;
+}
+
+.cd-tabs nav {
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  box-shadow: inset 0 -2px 3px rgba(255, 255, 255, 0.06);
+}
+
+.cd-tabs-navigation {
+  min-width: 480px;
+}
+
+.cd-tabs-navigation:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.cd-tabs-navigation li {
+  float: left;
+}
+
+.cd-tabs-navigation a {
+  position: relative;
+  display: block;
+  height: 40px;
+  text-align: center;
+  font-size: 14px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 700;
+  color: #c3c2b9;
+  padding-top: 0px;
+}
+
+.cd-tabs-navigation a.selected {
+  background-color: transparent !important;
+  box-shadow: inset 0 -2px 0 #007bff;
+  color: #29324e;
+}
+
+.cd-tabs-content {
+  background: transparent;
+}
+
+.cd-tabs-content li {
+  display: none;
+}
+
+.cd-tabs-content li.selected {
+  display: block;
+  -webkit-animation: cd-fade-in 0.5s;
+  animation: cd-fade-in 0.5s;
+}
+
+.cd-tabs-content li {
+  font-size: 15px;
+  line-height: 2;
+  margin-bottom: 0em;
+  text-align: justify;
+}
+
+.cd-tabs-content p {
+  font-size: 15px;
+  line-height: 2;
+  margin-bottom: 10px;
+  text-align: justify;
+}
+
+.cd-tabs-content .Img-p1 {
+  padding: 10px;
+  border-radius: 20px;
+  max-width: 700px;
+  margin: auto;
+  display: flex;
+  gap: 50px;
+}
+
+.cd-tabs-content .Img-p2 {
+  padding: 10px;
+  border-radius: 20px;
+  max-width: 500px;
+  margin: auto;
+  text-align: center;
+}
+
+.cd-tabs-content .Img-p3 {
+  padding: 10px;
+  border-radius: 20px;
+  max-width: 500px;
+  margin: auto;
+  text-align: center;
+}
+
+.cd-tabs-content .Img-p4 {
+  padding: 10px;
+  border-radius: 20px;
+  max-width: 350px;
+  margin: auto;
+  text-align: center;
+}
+
+.cd-tabs-content .rincian-wisata {
+  margin-left: 40px;
+}
+
+.cd-tabs-content blockquote {
+  font-size: 15px;
+  line-height: 2;
+  margin-bottom: 10px;
+  text-align: justify;
+  font-style: normal;
+}
+
+@media only screen and (min-width: 960px) {
+  .cd-tabs-content {
+    min-height: 0;
+  }
+}
+@-webkit-keyframes cd-fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes cd-fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.cd-tabs hr {
+  margin: 2em 0em;
+}
+
+.cd-tabs ul {
+  margin-bottom: 0;
+}
+.cd-tabs ul a {
+  padding-top: 2em;
+  padding-bottom: 4em;
+}
+.cd-tabs ul li {
+  padding: 0 1.5em;
+}
+
+.cd-tabs-navigation a {
+  font-size: 11px;
+  color: #2f2f2f;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.cd-tabs-content h1 {
+  font-size: 40px;
+  color: #2f2f2f;
+  line-height: 40px;
+  text-align: left;
+  font-weight: 600;
+}
+
+.cd-tabs-content h4 {
+  text-align: left;
+  font-size: 25px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.cd-tabs-content h5 {
+  margin-bottom: 10px;
+}
+
+.cd-tabs-content h6 {
+  margin-bottom: 10px;
+}
+
+.cd-tabs-content .a-insert {
+  text-align: left;
+  color: #df720d;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.cd-tabs-content .a-insert2 {
+  text-align: left;
+  color: #df720d;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.cd-tabs-content .text p {
+  font-size: 15px;
+  letter-spacing: 0.3px;
+  line-height: 24px;
+  padding-left: 0em;
+  padding-top: 0em;
+}
+
+.cd-tabs-content li {
+  padding-top: 20em;
+}
+
+.cd-tabs-navigation a.selected,
+.cd-tabs-navigation a.selected:hover {
+  color: #007bff;
+}
